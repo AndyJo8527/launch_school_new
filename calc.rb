@@ -8,13 +8,13 @@ puts ">> What opperation will you use?"
 operation = gets.chomp.to_s
 
 case operation
-  when "add" || "+"
+  when "add"
     puts num1.to_i + num2.to_i
-  when "subtract" || "-"
+  when "subtract"
     puts num1.to_i - num2.to_i
-  when "multiply" || "*"
+  when "multiply"
     puts num1.to_i * num2.to_i
-  when "divide" || "/"
+  when "divide"
     puts num1.to_f / num2.to_f
   else
     puts "That's not a valid operation"
