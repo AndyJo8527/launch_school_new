@@ -61,7 +61,7 @@ loop do #main loop
   end
   
     operator_prompt = <<-MSG
-  What operations would you like to perform?
+        What operations would you like to perform?
       1) add
       2) subtract
       3) multiply
