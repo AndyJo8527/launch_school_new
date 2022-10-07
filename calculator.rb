@@ -1,9 +1,13 @@
+# translating to other languages
+require 'yaml'
+MESSAGES = YAML.load_file('calculator_messages.yml')
+
 def prompt(message)
   Kernel.puts("=> #{message}")
 end
 
 def valid_number?(num)
-  num.to_i() != 0
+  num.to_i().to_s() == num
 end
 
 def operation_to_message(op)
@@ -19,14 +23,14 @@ def operation_to_message(op)
   end
 end
 
-prompt("Welcome to Calculator! Enter your name:")
+prompt(MESSAGES['welcome'])
 
 name = ''
 loop do
   name = Kernel.gets().chomp()
   
   if name.empty?()
-    prompt("Make sure to use a calid name.")
+    prompt(MESSAGES['valid_name'])
   else
     break
   end
@@ -38,13 +42,13 @@ loop do #main loop
 
   number1 = ''
   loop do
-  prompt("What is the first number?")
-  number1 = Kernel.gets().chomp()
+    prompt("What is the first number?")
+    number1 = Kernel.gets().chomp()
   
     if valid_number?(number1)
       break
     else
-      prompt("That doesn't look like a valid number")
+      prompt(MESSAGES['valid_number'])
     end
   end
   
@@ -56,7 +60,7 @@ loop do #main loop
     if valid_number?(number2)
       break
     else
-      prompt("Hmm... that doesn't look like a valid number")
+      prompt(MESSAGES['valid_number'])
     end
   end
   
@@ -86,14 +90,14 @@ loop do #main loop
   
   result = case operator
             when '1'
-              number1.to_i() + number2.to_i()
+              number1.to_f() + number2.to_f()
             when '2'
-              number1.to_i() - number2.to_i()
+              number1.to_f() - number2.to_f()
             when '3'
-              number1.to_i() * number2.to_i()
+              number1.to_f() * number2.to_f()
             when '4'
               number1.to_f() / number2.to_f()      
-  end
+          end
   
   prompt("The result is #{result}")
   

@@ -1,0 +1,5 @@
+
+welcome: "Welcome to the Calculator! Enter your name:"
+valid_name: "Make sure to enter a valid name."
+greeting: "Hi #{name}"
+valid_number: "Hmm... that doesn't look like a valid number."
