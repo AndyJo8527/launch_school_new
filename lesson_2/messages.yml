@@ -1,0 +1,6 @@
+welcome: 'Welcome to Rock, Paper, Scissors, Lizard, Spock!'
+name_request: 'What is your name?'
+valid_choice: "Sorry, that's not a valid choice, try again."
+again: 'Do you want to play again?'
+
+rules: 'Put rules here'
