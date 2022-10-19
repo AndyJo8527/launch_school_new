@@ -1,5 +1,5 @@
 # use single letters instead of full words
-# keep a tally of who won
+# reset score after three wins
 require 'yaml'
 MESSAGES = YAML.load_file('messages.yml')
 
