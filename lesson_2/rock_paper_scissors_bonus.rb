@@ -7,10 +7,10 @@ VALID_CHOICES = %w(rock paper scissors lizard spock)
 
 WINNING_COMBOS = {
   'rock' => ['scissors', 'lizard'],
+  'paper' => ['spock', 'rock'],
+  'scissors' => ['paper', 'lizard'],
   'lizard' => ['spock', 'paper'],
   'spock' => ['scissors', 'rock'],
-  'paper' => ['spock', 'rock'],
-  'scissors' => ['paper', 'lizard']
 }
 
 SCORE = { player: 0, computer: 0, ties: 0 }
@@ -82,7 +82,7 @@ loop do
   loop do
     prompt("Choose one: #{VALID_CHOICES.join(', ')}")
     choice = gets().chomp()
-
+    
     if VALID_CHOICES.include?(choice)
       break
     else
@@ -119,6 +119,7 @@ loop do
     next
   end
 end
+
 =begin
 This is where I would allow the player to restart the game
   prompt(MESSAGES['again'])
