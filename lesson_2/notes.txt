@@ -1,3 +1,0 @@
-Take the first letter of a word for a valid choice
-
-make a valid choice secondary constant?
